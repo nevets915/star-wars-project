@@ -7,16 +7,16 @@ export let initialState = {
 
 export function filmDetailsReducer(state = initialState, action: FilmDetailsActions) {
     switch (action.type) {
-        case FilmDetailsActionTypes.FETCH_FILMS_REQUEST:
+        case FilmDetailsActionTypes.FETCH_FILM_DETAILS_REQUEST:
             return Object.assign({}, state, {
                 isFetching: true,
             });
-        case FilmDetailsActionTypes.FETCH_FILMS_SUCCESS:
+        case FilmDetailsActionTypes.FETCH_FILM_DETAILS_SUCCESS:
             return Object.assign({}, state, {
                 isFetching: false,
                 film: action.payload
             });
-        case FilmDetailsActionTypes.FETCH_FILMS_FAILURE:
+        case FilmDetailsActionTypes.FETCH_FILM_DETAILS_FAILURE:
             return Object.assign({}, state, {
                 isFetching: false
             });

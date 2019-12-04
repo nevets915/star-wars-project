@@ -1,22 +1,22 @@
 import { Action } from '@ngrx/store';
 
 export enum FilmDetailsActionTypes {
-    FETCH_FILMS_REQUEST = 'FETCH_FILMS_REQUEST',
-    FETCH_FILMS_SUCCESS = 'FETCH_FILMS_SUCCESS',
-    FETCH_FILMS_FAILURE = 'FETCH_FILMS_FAILURE',
+    FETCH_FILM_DETAILS_REQUEST = 'FETCH_FILM_DETAILS_REQUEST',
+    FETCH_FILM_DETAILS_SUCCESS = 'FETCH_FILM_DETAILS_SUCCESS',
+    FETCH_FILM_DETAILS_FAILURE = 'FETCH_FILM_DETAILS_FAILURE',
 }
 
 export class FetchFilmDetailsRequest implements Action {
-    readonly type = FilmDetailsActionTypes.FETCH_FILMS_REQUEST;
+    readonly type = FilmDetailsActionTypes.FETCH_FILM_DETAILS_REQUEST;
 }
 
 export class FetchFilmDetailsSuccess implements Action {
-    readonly type = FilmDetailsActionTypes.FETCH_FILMS_SUCCESS;
+    readonly type = FilmDetailsActionTypes.FETCH_FILM_DETAILS_SUCCESS;
     constructor(public payload: any) { }
 }
 
 export class FetchFilmDetailsFailure implements Action {
-    readonly type = FilmDetailsActionTypes.FETCH_FILMS_FAILURE;
+    readonly type = FilmDetailsActionTypes.FETCH_FILM_DETAILS_FAILURE;
 }
 
 export type FilmDetailsActions

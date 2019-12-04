@@ -22,8 +22,7 @@ export class FilmListComponent implements OnInit {
     ngOnInit() {
         const me = this;
 
-        me.starWarsService.getFilms().subscribe((response: ApiResponse) => {
-
+        me.starWarsService.getFilms().subscribe((response: any) => {
             me.store.dispatch(new FetchFilmsRequest());
 
             if (response.results) {
@@ -32,6 +31,16 @@ export class FilmListComponent implements OnInit {
             } else {
                 me.store.dispatch(new FetchFilmsFailure());
             }
+        });
+    }
+
+    filter(searchItem): void {
+        this.store.select('filmList').subscribe((
+            state => this.films = state.films
+        ));
+
+        this.films = this.films.filter(film => {
+            return film.title.includes(searchItem);
         });
     }
 }

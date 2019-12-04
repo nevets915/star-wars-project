@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FilmListComponent } from './components/film-list/film-list.component';
 import { FilmItemComponent } from './components/film-item/film-item.component';
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
+import { FilmFilterComponent } from './components/film-filter/film-filter.component';
 
 /* Directive */
 export function logger(reducer: ActionReducer<any>): any {
@@ -36,6 +37,7 @@ export const metaReducers = [logger];
         FilmListComponent,
         FilmItemComponent,
         FilmDetailsComponent,
+        FilmFilterComponent,
     ],
     imports: [
         BrowserModule,

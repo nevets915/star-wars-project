@@ -27,7 +27,7 @@ export class FilmItemComponent implements OnInit {
     onClickTitle(film) {
         const me = this;
 
-        me.starWarsService.getFilmDetails(film.episode_id).subscribe((response: ApiResponse) => {
+        me.starWarsService.getFilmDetails(film.episode_id).subscribe((response: any) => {
 
             me.store.dispatch(new FetchFilmDetailsRequest());
 
